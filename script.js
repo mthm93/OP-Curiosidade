@@ -5,10 +5,8 @@ function login() {
     if (senha.value.length == '' || email.value.length == '') {
         msgErro.innerHTML = 'Login e/ou Senha Inválidos.';
         msgErro.style.color = "red";
-        msgErro.style.height = "12px";
-    } else if(senha.value.lenght == ) {
-        
-    } else {
-        msgErro.innerHTML = ''
+        msgErro.style.fontSize = "12px";
+    } else if(senha.value.lenght !== '' || email.value.lenght !== '') {
+        window.open("https://www.google.com", "_self")
     }
 }
