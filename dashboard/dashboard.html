@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src=".script.js"></script>
+    <title>OP Curiosidade | Dashboard</title>
+</head>
+<body>
+    
+    <!-- conteúdo da barra lateral -->
+
+    <aside>
+        <ul>
+            <li>
+                <a href="#">
+                    <span class="icon"><ion-icon name="planet-outline"></ion-icon></span>
+                    <span class="title">OP Curiosidade</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></ion-icon></span>
+                    <span class="title">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><ion-icon name="person-add-outline"></ion-icon></ion-icon></ion-icon></span>
+                    <span class="title">Cadastro</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><ion-icon name="document-text-outline"></ion-icon></ion-icon></span>
+                    <span class="title">Relatórios</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><ion-icon name="log-out-outline"></ion-icon></ion-icon></span>
+                    <span class="title">Sair</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- conteúdo principal da dashboard -->
+
+    <main>
+        <div class="topbar">
+            <div class="toggle">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+            <!-- Barra de pesquisa -->
+            <div class="pesquisa">
+                <label for="">
+                    <input type="text" placeholder="Pesquise aqui...">
+                    <ion-icon name="search-outline"></ion-icon>
+                </label>
+            </div>
+            <!-- Imagem do Usuário -->
+            <div class="user">
+                <img src="img/user.png">
+            </div>
+        </div>
+
+        <!-- Cards -->
+
+        <div class="cardBox">
+            <div class="card">
+                <div>
+                    <div class="numbers">1549</div>
+                    <div class="cardName">Total de Cadastros</div>
+                </div>
+                <div class="iconBx">
+                    <ion-icon name="eye-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="numbers">57</div>
+                    <div class="cardName">Cadastros no último mês</div>
+                </div>
+                <div class="iconBx">
+                    <ion-icon name="eye-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="numbers">10</div>
+                    <div class="cardName">Cadastros com pendência de revisão</div>
+                </div>
+                <div class="iconBx">
+                    <ion-icon name="eye-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 
+</body>
+</html>
