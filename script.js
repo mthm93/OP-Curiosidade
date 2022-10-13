@@ -2,8 +2,8 @@ function login() {
     let email = document.getElementById('email');
     let senha = document.getElementById('senha');
 
-    let emailValido = validarEmail(email);
-    
+    let emailValido = validarEmail();
+
     if (senha.value.length !== '' && email.value.length !== '' && emailValido == true) {
         window.open("file://C:/Users/mathe/Documents/Estudo/OP-Curiosidade/dashboard/dashboard.html", "_self");
     } else {
