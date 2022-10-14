@@ -12,7 +12,7 @@
     
     <!-- conteúdo da barra lateral -->
 
-    <aside>
+    <nav>
         <ul>
             <li>
                 <a href="#">
@@ -21,7 +21,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="dashboard.html">
                     <span class="icon"><ion-icon name="home-outline"></ion-icon></ion-icon></span>
                     <span class="title">Home</span>
                 </a>
@@ -39,13 +39,13 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="../index.html">
                     <span class="icon"><ion-icon name="log-out-outline"></ion-icon></ion-icon></span>
                     <span class="title">Sair</span>
                 </a>
             </li>
         </ul>
-    </aside>
+    </nav>
 
     <!-- conteúdo principal da dashboard -->
 
@@ -99,9 +99,52 @@
             </div>
         </div>
 
-        <!-- Dados -->
+        <!-- Lista de Cadastros -->
 
-        
+        <section>
+            <div class="cadastrosRecentes">
+                <div class="cardHeader">
+                    <h2>Cadastros Recentes</h2>
+                    <a href="#" class="btn">Ver Tudo</a>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Nome</td>
+                            <td>E-mail</td>
+                            <td>Status</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Stephanie Nichols</td>
+                            <td>stephanienichols@gmail.com</td>
+                            <td><span class="statusAtivo">Ativo</span>
+                        </tr>
+                        <tr>
+                            <td>Jeffrey Kane</td>
+                            <td>jeffrey_kane@yahoo.com</td>
+                            <td><span class="statusAtivo">Ativo</span>
+                        </tr>
+                        <tr>
+                            <td>Darin Miller</td>
+                            <td>darinmiller01@gmail.com</td>
+                            <td><span class="statusAtivo">Ativo</span>
+                        </tr>
+                        <tr>
+                            <td>Andrew Stuart</td>
+                            <td>andrewstuart@gmail.com</td>
+                            <td><span class="statusAtivo">Ativo</span>
+                        </tr>
+                        <tr>
+                            <td>Valerie Aguilar</td>
+                            <td>valerie_aguilar@gmail.com</td>
+                            <td><span class="statusInativo">Inativo</span>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
     </main>
 

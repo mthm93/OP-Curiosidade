@@ -19,7 +19,7 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
 }
-aside {
+nav {
     position: fixed;
     width: 300px;
     height: 100%;
@@ -28,30 +28,30 @@ aside {
     transition: 0.5s;
     overflow: hidden;
 }
-aside.active {
+nav.active {
     width: 80px;
 }
-aside ul {
+nav ul {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
 }
-aside ul li {
+nav ul li {
     position: relative;
     width: 100%;
     list-style: none;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
 }
-aside ul li:hover, aside ul li.hovered {
+nav ul li:hover, aside ul li.hovered {
     background: var(--white);
 }
-aside ul li:nth-child(1) {
+nav ul li:nth-child(1) {
     margin-bottom: 40px;
     pointer-events: none;
 }
-aside ul li a {
+nav ul li a {
     margin: auto;
     position: relative;
     width: 100%;
@@ -59,10 +59,10 @@ aside ul li a {
     text-decoration: none;
     color: var(--white);
 }
-aside ul li:hover a, aside ul li.hovered a {
+nav ul li:hover a, aside ul li.hovered a {
     color: var(--green)
 }
-aside ul li a .icon {
+nav ul li a .icon {
     position: relative;
     display: block;
     min-width: 60px;
@@ -70,10 +70,10 @@ aside ul li a .icon {
     line-height: 77px;
     text-align: center;
 }
-aside ul li a .icon ion-icon {
+nav ul li a .icon ion-icon {
     font-size: 1.75em;
 }
-aside ul li a .title {
+nav ul li a .title {
     position: relative;
     display: block;
     padding: 0 10px;
@@ -82,7 +82,7 @@ aside ul li a .title {
     text-align: start;
     white-space: nowrap;
 }
-aside ul li:hover a::before, aside ul li.hovered a::before {
+nav ul li:hover a::before, aside ul li.hovered a::before {
     content: '';
     position: absolute;
     right: 0;
@@ -93,7 +93,7 @@ aside ul li:hover a::before, aside ul li.hovered a::before {
     border-radius: 50%;
     box-shadow: 35px 35px 0 10px var(--white);
 }
-aside ul li:hover a::after, aside ul li.hovered a::after {
+nav ul li:hover a::after, aside ul li.hovered a::after {
     content: '';
     position: absolute;
     right: 0;
@@ -218,4 +218,83 @@ main.active {
 .cardBox .card:hover .iconBx {
     color: var(--white);
     transition: .3s ease-in-out;
+}
+section {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    gap: 30px;
+    margin-top: 10px;
+}
+section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+section table thead td {
+    font-weight: 600;
+}
+section .cadastrosRecentes table tr {
+    color: var(--black1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+section .cadastrosRecentes table tr:last-child {
+    border-bottom: none;
+}
+section .cadastrosRecentes table tbody tr:hover {
+    background: var(--green);
+    color: var(--white);
+    transition: .3s ease-in-out;
+}
+section .cadastrosRecentes table tr td {
+    padding: 10px;
+}
+section .cadastrosRecentes table tr td:last-child {
+    text-align: end;
+}
+section .cadastrosRecentes table tr td:nth-child(2) {
+    text-align: center;
+}
+.cadastrosRecentes {
+    position: relative;
+    display: grid;
+    min-height: 400px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    border-radius: 20px;
+}
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.cardHeader h2 {
+    font-weight: 600;
+    color: var(--green);
+}
+.btn {
+    position: relative;
+    padding: 5px 10px;
+    background: var(--green);
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 6px;
+}
+.statusAtivo {
+    padding: 2px 4px;
+    background: #1579a7;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.statusInativo {
+    padding:2px 4px;
+    background: crimson;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
 }

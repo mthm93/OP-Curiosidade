@@ -10,10 +10,10 @@ item.addEventListener('mouseover', activeLink))
 /* Abre a fecha do Menu */
 
 let toggle = document.querySelector('.toggle');
-let aside = document.querySelector ('aside');
+let nav = document.querySelector ('nav');
 let main = document.querySelector('main');
 
 toggle.onclick = function() {
-    aside.classList.toggle('active');
+    nav.classList.toggle('active');
     main.classList.toggle('active');
 }
