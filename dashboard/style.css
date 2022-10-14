@@ -298,3 +298,16 @@ section .cadastrosRecentes table tr td:nth-child(2) {
     font-size: 14px;
     font-weight: 500;
 }
+
+/* Página de Cadastro */
+
+article header {
+    display: flex;
+    justify-content: space-between;
+}
+article section input {
+    background: rgb(223, 223, 223);
+    border-width: 1px;
+    min-height: 2rem;
+    padding: 5px;
+}
