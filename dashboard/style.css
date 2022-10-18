@@ -330,7 +330,7 @@ article section input {
 .linhaVerde {
     border: 0;
     height: 5px;
-    background-color: var(--green);
+    background: linear-gradient(120deg, #41CC97, #ffffff);
     width: 66px;
     margin-left: 0px;
     margin-top: 5px;
@@ -370,5 +370,5 @@ article section input {
     transition: .3s ease-in-out;
 }
 
-/* Página de Cadastro */
+/* Página de Relatório */
 
