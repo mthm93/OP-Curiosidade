@@ -235,22 +235,22 @@ section table {
 section table thead td {
     font-weight: 600;
 }
-section .cadastrosRecentes table tr {
+section .cadastrosRecentes table tr, .relatorioCadastro table tr {
     color: var(--black1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-section .cadastrosRecentes table tr:last-child {
+section .cadastrosRecentes table tr:last-child, .relatorioCadastro table tr:last-child {
     border-bottom: none;
 }
-section .cadastrosRecentes table tbody tr:hover {
+section .cadastrosRecentes table tbody tr:hover, .relatorioCadastro table tbody tr:hover {
     background: var(--green);
     color: var(--white);
     transition: .3s ease-in-out;
 }
-section .cadastrosRecentes table tr td {
+section .cadastrosRecentes table tr td, .relatorioCadastro table tr td {
     padding: 10px;
 }
-section .cadastrosRecentes table tr td:last-child {
+section .cadastrosRecentes table tr td:last-child, .relatorioCadastro table tr td:last-child {
     text-align: end;
 }
 .cadastrosRecentes {
@@ -298,6 +298,14 @@ section .cadastrosRecentes table tr td:last-child {
 
 /* Página de Cadastro */
 
+.paginaCadastro {
+    background-color: var(--white);
+    box-shadow: 5px 10px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    margin: 1rem auto;
+    margin-left: 1rem;
+    max-width: 97.8%;
+}
 article header {
     display: flex;
     justify-content: space-between;
@@ -309,7 +317,7 @@ article header h3 {
     padding: 10px 70px;
     border-bottom-left-radius: 8px;
 }
-article section input {
+article section .fatos input {
     background: rgb(241, 241, 241);
     border-width: 1px;
     border-radius: 3px;
@@ -317,12 +325,15 @@ article section input {
     width: 100%;
     margin-bottom: 1rem;
     padding: 5px;
+    margin-right: 1rem;
 }
 .checkboxCadastro {
+    width: 20px auto;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: 7px;
+    margin-bottom: 1rem;
 }
 .fatos label, .interesses label, .sentimentos label, .valores label {
     font-size: 14px;
@@ -350,6 +361,7 @@ article section input {
     background-color: rgb(241, 241, 241);
     width: 100%;
     height: 80px;
+    resize: vertical;
 }
 .btnCadastro {
     display: flex;
@@ -362,13 +374,43 @@ article section input {
     text-decoration: none;
     color: var(--white);
     border-radius: 6px;
+    font-size: 1rem;
 }
 .botaoCadastro:hover {
     background: #38964f;
-    box-shadow: 5 10px 25px rgba(0,0,0,0.08);
+    box-shadow: 5px 10px 25px rgba(0, 0, 0, 0.247);
     color: var(--white);
     transition: .3s ease-in-out;
 }
 
 /* Página de Relatório */
 
+.paginaRelatorios {
+    background-color: var(--white);
+    box-shadow: 5px 10px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    margin: 1rem auto;
+    margin-left: 1rem;
+    max-width: 97.8%;
+}
+
+.paginaRelatorios a {
+    text-decoration: none;
+}
+
+/* Página de Impressão de Relatório */
+
+.impressaoRelatorio {
+    display: flex;
+    justify-content: space-between;
+}
+
+.impressaoRelatorio .btnCadastro {
+    height: 15px;
+}
+
+.impressaoRelatorio .btnCadastro .botaoCadastro {
+    display: flex;
+    align-items: center;
+    height: 15px;
+}
