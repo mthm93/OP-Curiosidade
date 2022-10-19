@@ -356,6 +356,7 @@ article section .fatos input {
     width: 90%;
 }
 #interesses, #sentimentos , #valores , #outrasInformaçoes {
+    border-width: 1px;
     border-radius: 3px;
     padding: 5px;
     background-color: rgb(241, 241, 241);
@@ -413,4 +414,5 @@ article section .fatos input {
     display: flex;
     align-items: center;
     height: 15px;
+    cursor: pointer;
 }
