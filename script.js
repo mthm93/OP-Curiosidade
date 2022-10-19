@@ -5,7 +5,7 @@ function login() {
     let emailValido = validarEmail();
 
     if (senha.value.length !== '' && email.value.length !== '' && emailValido == true) {
-        window.open("https://mthm93.github.io/OP-Curiosidade/dashboard.html", "_self");
+        window.open("https://mthm93.github.io/OP-Curiosidade/dashboard/dashboard.html", "_self");
     } else {
         msgErro.innerHTML = 'Login e/ou Senha Inválidos.';
         msgErro.style.color = "red";
