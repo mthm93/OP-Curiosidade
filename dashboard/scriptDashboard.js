@@ -1,3 +1,5 @@
+/* Menu Animado */
+
 let list = document.querySelectorAll('aside li');
 function activeLink() {
     list.forEach((item) =>
