@@ -18,6 +18,8 @@ toggle.onclick = function() {
     main.classList.toggle('active');
 }
 
+/* Impressão da página de Relatórios */
+
 function imprimir() {
     window.print();
     return false;
