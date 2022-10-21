@@ -19,6 +19,9 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
 }
+
+/* Conteúdo da Barra Lateral */
+
 nav {
     position: fixed;
     width: 300px;
@@ -137,6 +140,9 @@ main.active {
     font-size: 2.5em;
     cursor: pointer;
 }
+
+/* Barra de Pesquisa */
+
 .pesquisa {
     position: relative;
     width: 400px;
@@ -169,6 +175,9 @@ main.active {
     overflow: hidden;
     cursor: pointer;
 }
+
+/* Imagem do Usuário */
+
 .user img {
     position: absolute;
     top: 0;
@@ -177,6 +186,9 @@ main.active {
     height: 100%;
     object-fit: cover;
 }
+
+/* Cards */
+
 .cardBox {
     position: relative;
     width: 100%;
@@ -219,6 +231,9 @@ main.active {
     color: var(--white);
     transition: .3s ease-in-out;
 }
+
+/* Lista de Cadastros Recentes + Tabela da página de Relatório */
+
 section {
     position: relative;
     width: 100%;
