@@ -11,5 +11,4 @@ function cadastro() {
         alertaCadastro.style.color = "red";
         alertaCadastro.style.fontSize = "12px";
     }
-    console.log("Clicou");
 }
