@@ -1,6 +1,6 @@
 /* Menu Animado */
 
-let list = document.querySelectorAll('aside li');
+let list = document.querySelectorAll('nav li');
 function activeLink() {
     list.forEach((item) =>
     item.classList.remove('hovered'));
@@ -18,11 +18,4 @@ let main = document.querySelector('main');
 toggle.onclick = function() {
     nav.classList.toggle('active');
     main.classList.toggle('active');
-}
-
-/* Impressão da página de Relatórios */
-
-function imprimir() {
-    window.print();
-    return false;
 }

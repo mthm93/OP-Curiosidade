@@ -31,9 +31,6 @@ nav {
     transition: 0.5s;
     overflow: hidden;
 }
-nav.active {
-    width: 80px;
-}
 nav ul {
     position: absolute;
     top: 0;
@@ -47,9 +44,6 @@ nav ul li {
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
 }
-nav ul li:hover, aside ul li.hovered {
-    background: var(--white);
-}
 nav ul li:nth-child(1) {
     margin-bottom: 40px;
     pointer-events: none;
@@ -61,9 +55,6 @@ nav ul li a {
     display: flex;
     text-decoration: none;
     color: var(--white);
-}
-nav ul li:hover a, aside ul li.hovered a {
-    color: var(--green)
 }
 nav ul li a .icon {
     position: relative;
@@ -85,7 +76,23 @@ nav ul li a .title {
     text-align: start;
     white-space: nowrap;
 }
-nav ul li:hover a::before, aside ul li.hovered a::before {
+
+/* Animações da Barra Lateral */
+
+main.active {
+    width: calc(100% - 80px);
+    left: 80px;
+}
+nav.active {
+    width: 80px;
+}
+nav ul li:hover a, aside ul li.hovered a {
+    color: var(--green)
+}
+nav ul li:hover, aside ul li.hovered {
+    background: var(--white);
+}
+nav ul li:hover a::before {
     content: '';
     position: absolute;
     right: 0;
@@ -96,7 +103,7 @@ nav ul li:hover a::before, aside ul li.hovered a::before {
     border-radius: 50%;
     box-shadow: 35px 35px 0 10px var(--white);
 }
-nav ul li:hover a::after, aside ul li.hovered a::after {
+nav ul li:hover a::after {
     content: '';
     position: absolute;
     right: 0;
@@ -117,10 +124,6 @@ main {
     min-height: 100vh;
     background: var(--white);
     transition: 0.5s;
-}
-main.active {
-    width: calc(100% - 80px);
-    left: 80px;
 }
 .topbar {
     width: 100%;
@@ -232,85 +235,6 @@ main.active {
     transition: .3s ease-in-out;
 }
 
-/* Lista de Cadastros Recentes + Tabela da página de Relatório */
-
-section {
-    position: relative;
-    width: 100%;
-    padding: 20px;
-    display: grid;
-    gap: 30px;
-    margin-top: 10px;
-}
-section table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-section table thead td {
-    font-weight: 600;
-}
-section .cadastrosRecentes table tr, .relatorioCadastro table tr {
-    color: var(--black1);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-section .cadastrosRecentes table tr:last-child, .relatorioCadastro table tr:last-child {
-    border-bottom: none;
-}
-section .cadastrosRecentes table tbody tr:hover, .relatorioCadastro table tbody tr:hover {
-    background: var(--green);
-    color: var(--white);
-    transition: .3s ease-in-out;
-}
-section .cadastrosRecentes table tr td, .relatorioCadastro table tr td {
-    padding: 10px;
-}
-section .cadastrosRecentes table tr td:last-child, .relatorioCadastro table tr td:last-child {
-    text-align: end;
-}
-.cadastrosRecentes {
-    position: relative;
-    display: grid;
-    min-height: 400px;
-    background: var(--white);
-    padding: 20px;
-    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
-    border-radius: 20px;
-}
-.cardHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-.cardHeader h2 {
-    font-weight: 600;
-    color: var(--green);
-}
-.btn {
-    position: relative;
-    padding: 5px 10px;
-    background: var(--green);
-    text-decoration: none;
-    color: var(--white);
-    border-radius: 6px;
-}
-.statusAtivo {
-    padding: 2px 4px;
-    background: #1579a7;
-    color: var(--white);
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 500;
-}
-.statusInativo {
-    padding:2px 4px;
-    background: crimson;
-    color: var(--white);
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 500;
-}
-
 /* Página de Cadastro */
 
 .paginaCadastro {
@@ -391,12 +315,92 @@ article section .fatos input {
     color: var(--white);
     border-radius: 6px;
     font-size: 1rem;
+    cursor: pointer;
 }
 .botaoCadastro:hover {
     background: #38964f;
     box-shadow: 5px 10px 25px rgba(0, 0, 0, 0.247);
     color: var(--white);
     transition: .3s ease-in-out;
+}
+
+/* Lista de Cadastros Recentes + Tabela da página de Relatório */
+
+section {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    gap: 30px;
+    margin-top: 10px;
+}
+section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+section table thead td {
+    font-weight: 600;
+}
+section .cadastrosRecentes table tr, .relatorioCadastro table tr {
+    color: var(--black1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+section .cadastrosRecentes table tr:last-child, .relatorioCadastro table tr:last-child {
+    border-bottom: none;
+}
+section .cadastrosRecentes table tbody tr:hover, .relatorioCadastro table tbody tr:hover {
+    background: var(--green);
+    color: var(--white);
+    transition: .3s ease-in-out;
+}
+section .cadastrosRecentes table tr td, .relatorioCadastro table tr td {
+    padding: 10px;
+}
+section .cadastrosRecentes table tr td:last-child, .relatorioCadastro table tr td:last-child {
+    text-align: end;
+}
+.cadastrosRecentes {
+    position: relative;
+    display: grid;
+    min-height: 400px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    border-radius: 20px;
+}
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.cardHeader h2 {
+    font-weight: 600;
+    color: var(--green);
+}
+.btn {
+    position: relative;
+    padding: 5px 10px;
+    background: var(--green);
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 6px;
+}
+.statusAtivo {
+    padding: 2px 4px;
+    background: #1579a7;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.statusInativo {
+    padding:2px 4px;
+    background: crimson;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 /* Página de Relatório */
@@ -431,3 +435,17 @@ article section .fatos input {
     height: 15px;
     cursor: pointer;
 }
+
+@media print {
+    main {
+        width: 100%;
+        position: relative !important;
+        left: 0px;
+    }
+    .impressaoRelatorio, .navMenu, .topbar, .tituloRelatorio {
+        display: none;
+    }
+}
+
+
+
