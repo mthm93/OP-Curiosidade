@@ -5,8 +5,8 @@
 
 - Algumas funções implementadas no projeto, como: window.print, window.open;
 - Procurar sempre melhorar a leitura do código;
-- Evitar o Uso de position: absolute;
-- Procurar sempre usar Grid ao invés de tabelas buscando responsividade;
+- Evitar o Uso de position: absolute pois torna o conteúdo mais rígido e isso deixa mais díficil na hora de fazer um projeto responsivo;
+- Procurar sempre usar Grid ao invés de tabelas pelo mesmo motivo de responsividade;
 - Melhor uso das tags.
 
 - Sugestões sempre são bem-vindas, estou sempre em busca de melhorar meu código!
